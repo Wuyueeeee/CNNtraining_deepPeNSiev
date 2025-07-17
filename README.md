@@ -1,21 +1,21 @@
 # CNNtraining_deepPeNSiev
-for windows
-##1. install
-   docker desktop  https://www.docker.com/products/docker-desktop
-   Git             https://git-scm.com/downloads
+## 1. install
+   # docker desktop  https://www.docker.com/products/docker-desktop
+   # Git             https://git-scm.com/downloads
 
 ```bash
 git clone https://github.com/RaulMurillo/deep-pensieve.git
 cd deep-pensieve
 ```
 
-##2.
+## 2.run docker 
 ```bash
-docker built -t deep_pns -f Dockerfile .
-docker run -it --rm -v "${PWD}:/workspace" deep_pns /bin/bash
+docker build -t deep_pns -f Dockerfile .
+docker run -it --rm -v "deep-pensieve文件夹地址":/workspace deep_pns /bin/bash
 ```
 
-##3.
+## 3.start training
 ```bash
-python3 cifar10_train.py
+cd /workspace/src/TensorFlow
+python3 lenet5_train.py float32
 ```
