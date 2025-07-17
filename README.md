@@ -15,6 +15,7 @@ docker run -it --rm -v "deep-pensieve文件夹地址":/workspace deep_pns /bin/b
 ```
 
 ## 3.start training
+#### python3 + 训练模型 + 训练目标（float32/float16/posit32/posit16/posit8）
 ```bash
 cd /workspace/src/TensorFlow
 python3 lenet5_train.py float32
